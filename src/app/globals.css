@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* globals.css */
+.home-container {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logo-wrapper {
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.welcome-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Taskbar styling */
+.taskbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.taskbar a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.taskbar a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+/* make container a full-height flex row */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* sidebar: fixed-width, full height */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;           /* adjust as needed */
+  height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #fff; /* or your preferred bg */
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+/* vertical list in sidebar */
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li + li {
+  margin-top: 1.5rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: inherit;
+}
+
+.sidebar a:hover {
+  color: #0070f3;
+}
+
+/* main content: leave space for sidebar */
+.content {
+  margin-left: 200px;      /* same width as .sidebar */
+  flex: 1;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+/* reuse your existing logo/title styles */
+.logo-wrapper {
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.welcome-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+/* container stays the same */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* sidebar (same) */
+/* shorten the sidebar’s own padding if you like, and push the list down */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  padding: 0 1rem;            /* remove top padding */
+  background-color: #fff;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.05);
+  z-index: 1;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 4rem 0 0;           /* ← pushes “Mekan Bilgileri” down 4rem */
+  padding: 0;
+}
+
+.sidebar li + li {
+  margin-top: 1.5rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  color: inherit;
+}
+
+
+/* main content slides over when sidebar opens */
+.content {
+  flex: 1;
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+}
+.content.with-sidebar {
+  margin-left: 200px; /* same as .sidebar width */
+}
+
+/* menu-button in top left */
+.menu-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;          /* higher than sidebar */
+  background-color: #fff; /* match page bg (or any color) */
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* reuse your existing logo/title styles */
+.logo-wrapper {
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.welcome-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
