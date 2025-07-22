@@ -1,0 +1,47 @@
+@reference "tailwindcss";
+
+.card {
+  @apply rounded-lg border-l-4 shadow-sm p-4 transition-transform ease-in-out duration-200 overflow-hidden cursor-pointer;
+}
+.card:hover {
+  @apply transform -translate-y-1 shadow-lg;
+}
+
+/* Header */
+.cardHeader {
+  @apply flex justify-between items-center;
+}
+.cardTitle {
+  @apply text-xl font-semibold;
+}
+.cardSummary {
+  @apply text-gray-600;
+}
+
+/* Detaylar */
+.cardDetails {
+  @apply mt-4 border-t pt-4 text-gray-700 overflow-hidden transition-[max-height] duration-300 ease-in-out;
+  max-height: 0;
+}
+.cardDetailsOpen {
+  max-height: 800px; /* Yeterince büyük tut */
+}
+
+/* Tıklanınca tüm satırı kapla */
+.expanded {
+  @apply col-span-2;
+}
+
+/* Renk varyasyonları (logo uyumlu pastel tonlar) */
+.menuCard {
+  @apply bg-amber-50 border-amber-300;
+}
+.puanCard {
+  @apply bg-emerald-50 border-emerald-300;
+}
+.konumCard {
+  @apply bg-sky-50 border-sky-300;
+}
+.saatlerCard {
+  @apply bg-violet-50 border-violet-300;
+}
