@@ -1,0 +1,42 @@
+@reference "tailwindcss";
+
+
+.heading {
+  @apply text-3xl font-bold mb-10 text-center text-[#5AB57B] tracking-tight;
+}
+
+.card {
+  @apply bg-[#FAF7F2] border border-gray-200 rounded-2xl p-6 shadow-[0_1px_3px_rgba(0,0,0,0.06)] hover:shadow-md transition;
+}
+
+.cardName {
+  @apply font-semibold text-gray-800 text-base;
+}
+
+.cardDate {
+  @apply text-sm text-gray-500;
+}
+
+.cardStars {
+  @apply text-[#FFD93D] font-medium;
+}
+
+.commentText {
+  @apply text-gray-700 mt-2 text-base leading-relaxed;
+}
+
+.selectBox {
+  @apply border border-gray-300 p-2 rounded-lg shadow-sm;
+}
+
+.dropdownButton {
+  @apply border border-[#FFD93D] text-[#5AB57B] font-medium p-2 rounded-lg bg-white shadow-sm hover:bg-[#FFF9E3] transition;
+}
+
+.dropdownMenu {
+  @apply absolute right-0 mt-2 w-48 bg-white border border-[#FFD93D] rounded-lg shadow-lg z-10 p-2 space-y-2 text-sm;
+}
+
+.ratingCheckbox {
+  @apply flex items-center gap-2 cursor-pointer text-gray-700;
+}
