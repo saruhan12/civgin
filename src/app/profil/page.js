@@ -1,18 +1,19 @@
 'use client'
-import Sidebar from '../../components/Sidebar'
 
-export default function Profil() {
+import ProfileCard from './components/ProfileCard'
+
+export default function ProfilPage() {
+  const profilData = {
+    mekanAdi: 'Çıvgın Kafe',
+    adres: 'Moda Caddesi No:17, Kadıköy, İstanbul',
+    email: 'iletisim@civginkafe.com',
+    telefon: '+90 212 123 45 67',
+    isletmeci: 'Onur Alp Gündüz',
+  }
+
   return (
-    <div className="app-container">
-      <Sidebar />
-      <main className="content">
-        <div className="max-w-3xl mx-auto p-6">
-          <h1 className="text-3xl font-bold mb-4">
-            Profil
-          </h1>
-          {/* Profil içeriği buraya */}
-        </div>
-      </main>
+    <div className="min-h-screen bg-amber-50 flex items-center justify-center p-6">
+      <ProfileCard profil={profilData} />
     </div>
   )
 }
