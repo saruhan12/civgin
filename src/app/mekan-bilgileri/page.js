@@ -5,7 +5,6 @@ import Link from 'next/link'
 export default function MekanBilgileriPage() {
   return (
     <div className="app-container">
-      <Sidebar />
 
       <main className="content flex flex-col items-center p-6">
         <h1 className="text-3xl font-bold text-green-700 mb-8 text-center">
