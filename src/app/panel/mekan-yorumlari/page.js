@@ -1,5 +1,5 @@
 'use client'
-import Sidebar from '../../components/Sidebar'
+import Sidebar from '../../../components/Sidebar'
 import CommentList from './Comment-List/CommentList'
 export default function MekanYorumlari() {
   return (

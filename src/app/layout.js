@@ -1,30 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Navbar from "../components/Navbar";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// src/app/layout.js
+import './globals.css'
+import { Providers } from './providers'
 
 export const metadata = {
-  title: "Çıvgın",
-  description: "Mekan Bilgileri, İstatistikleri, Yorumları ve Profil",
+  title: 'Çıvgın',
+  description: 'Mekan yönetim paneli',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <body>
-        {/* ← this appears on every page */}
-        <Navbar />
-        <main>
+        {/* Wrap *all* your app in the NextAuth provider */}
+        <Providers>
           {children}
-        </main>
+        </Providers>
       </body>
     </html>
   )

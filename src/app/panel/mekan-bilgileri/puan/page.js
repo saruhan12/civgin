@@ -1,5 +1,5 @@
 'use client'
-import Sidebar from '../../../components/Sidebar'
+import Sidebar from '../../../../components/Sidebar'
 import Link from 'next/link'
 
 export default function PuanDetails() {

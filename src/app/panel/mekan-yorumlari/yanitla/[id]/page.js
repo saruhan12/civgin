@@ -2,7 +2,7 @@
 import { use } from 'react'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import { comments } from '../../../../mock/comments'
+import { comments } from '../../../../../mock/comments'
 
 export default function YanitlaPage({ params }) {
   const { id } = use(params)

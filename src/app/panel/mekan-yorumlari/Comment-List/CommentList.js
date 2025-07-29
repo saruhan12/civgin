@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { comments } from "../../../mock/comments"
+import { comments } from "../../../../mock/comments"
 import styles from "../page.module.css"
 
 export default function CommentList() {
